@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <style>
+    body {
+      background-color: beige;
+      padding: 15px;
+    }
+    * {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+    nav ul {
+      display: flex;
+      gap: 50px;
+      list-style-type: square;
+    }
+    form {
+      display: inline-block;
+      border: 2px solid black;
+      border-radius: 8px;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+  </style>
+  <body>
+    <header>
+      <h1>Krishna Manoj PVR</h1>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#introduction">Introduction</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#feedback">Feedback</a></li>
+      </ul>
+    </nav>
+    <hr />
+    <main>
+      <section id="introduction">
+        <h2>Self Introduction</h2>
+        <p id="self-intro"></p>
+      </section>
+      <hr />
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul id="skills-list"></ul>
+      </section>
+      <hr />
+      <section id="projects">
+        <h2>Projects / Work Experiences</h2>
+        <ul id="projects-list"></ul>
+      </section>
+      <hr />
+      <section id="achievement">
+        <h2>Achievements</h2>
+        <ul id="achievement-list"></ul>
+      </section>
+      <hr />
+      <section id="education">
+        <h2>Education Profile</h2>
+        <ul id="education-list"></ul>
+      </section>
+      <hr />
+      <section id="contact">
+        <h2>Contact Information</h2>
+        <ul id="contact-list"></ul>
+      </section>
+      <hr />
+      <section id="feedback">
+        <h2>Feedback Form</h2>
+        <form id="feedback-form">
+          <label for="name">Name:</label><br />
+          <input type="text" id="name" name="name" required /><br /><br />
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+          <label for="feedback">Feedback:</label><br />
+          <textarea
+            id="feedback"
+            name="feedback"
+            rows="3"
+            cols="22"
+            required
+          ></textarea
+          ><br /><br />
+          <input type="submit" value="Submit" />
+        </form>
+      </section>
+      <hr />
+    </main>
+    <footer>
+      <p>&copy; 2025 My Portfolio</p>
+    </footer>
+
+    <script>
+      const data = {
+        selfintro:
+          "Enthusiastic full stack developer and AI learner. Passionate about translating academic concepts into practical solutions and eager to contribute in a dynamic, challenging environment.",
+        skills: {
+          languages: ["Java", "Python", "C/C++", "Dart"],
+          webTechnologies: ["HTML", "CSS", "JavaScript"],
+          databases: ["MongoDB", "MySQL"],
+          frameworks: [
+            "Pandas",
+            "Numpy",
+            "Flask",
+            "SKLearn",
+            "FastAPI",
+            "NodeJS",
+            "ExpressJS",
+            "ReactJS",
+            "Bootstrap",
+            "Flutter",
+          ],
+          tools: [
+            "Visual Studio Code",
+            "Git",
+            "GitHub",
+            "Google Cloud",
+            "Figma",
+            "Canva",
+            "Postman",
+            "Playwright",
+            "Vercel",
+            "Render",
+            "Jupyter Notebook",
+          ],
+          operatingSystems: ["Windows", "Linux"],
+        },
+        projects: [
+          {
+            title: "Tech for Autism and Dyslexia",
+            description:
+              "Leading the development of interactive games for children with Autism and Dyslexia. Built a website for parents, therapists, doctors, and centers to view and manage children's reports, successfully digitizing 95% of handwritten reports and game data and enhancing report accessibility and management.",
+            stack: ["MERN"],
+            link: "#",
+          },
+          {
+            title: "Tires on Highways",
+            description:
+              "A web application analyzes tire conditions through images captured at toll plazas, achieving 85% accuracy in detecting worn-out or unsafe tires. It alerts vehicle owners via SMS, contributing to improved road safety.",
+            stack: ["MERN", "ML"],
+            link: "#",
+          },
+        ],
+        achievements: [
+          "Achieved the NCC 'A' Certificate, awarded by the National Cadet Corps for successfully completing the program, demonstrating discipline, leadership, and physical endurance.",
+          "Certified in 'Introduction to AWS Marketplace and Skill Builder'",
+          "Completed Google Cloud Study Jams and Generative AI course under Google Developer Student Clubs",
+          "Contributed to open source projects Girl Script Summer of Code 2024",
+          "Certified as a Postman API Fundamentals Student Expert",
+        ],
+        education: [
+          {
+            degree: "Bachelor of Technology",
+            year: "2022 - Present",
+            institution: "Keshav Memorial Institute of Technology, Hyderabad",
+            cgpa: "9.46/10",
+          },
+          {
+            degree: "Class-12",
+            year: "May 2022",
+            institution:
+              "Nine Education IIT Academy, Hyderabad. Telangana State Board of Intermediate Education.",
+            marks: "971/1000",
+          },
+          {
+            degree: "Class-10",
+            year: "March 2020",
+            institution:
+              "DAV High School, Nagarjuna Sagar. Board of Secondary Education, Telangana State.",
+            cgpa: "10/10",
+          },
+        ],
+        contactinfo: {
+          Phone: "+91 9441585691",
+          Email: "krishnamanojpalankipati@gmail.com",
+          Location: "Hyderabad, India",
+          LinkedIn: "linkedin.com/in/krishna-manoj-pvr-14b237267",
+          GitHub: "github.com/krishnamanojpvr",
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("self-intro").textContent = data.selfintro;
+
+        const skillsList = document.getElementById("skills-list");
+        for (const category in data.skills) {
+          const skillCategory = document.createElement("li");
+          skillCategory.innerHTML = `<strong>${category
+            .replace(/([A-Z])/g, " $1")
+            .trim()}:</strong> ${data.skills[category].join(", ")}`;
+          skillsList.appendChild(skillCategory);
+        }
+
+        const projectsList = document.getElementById("projects-list");
+        data.projects.forEach((project) => {
+          const projectItem = document.createElement("li");
+          projectItem.innerHTML = `<strong>${project.title}</strong>: ${
+            project.description
+          } <br> <em>Stack:</em> ${project.stack.join(", ")} | <a href="${
+            project.link
+          }" target="_blank">View Project</a>`;
+          projectsList.appendChild(projectItem);
+        });
+
+        const achievementlist = document.getElementById("achievement-list");
+        data.achievements.forEach((achievement) => {
+          const achievementItem = document.createElement("li");
+          achievementItem.textContent = achievement;
+          achievementlist.appendChild(achievementItem);
+        });
+
+        const educationList = document.getElementById("education-list");
+        data.education.forEach((edu) => {
+          const eduItem = document.createElement("li");
+          eduItem.innerHTML = `<strong>${edu.degree} (${edu.year})</strong> - ${
+            edu.institution
+          } <br> <em>CGPA/Marks:</em> ${edu.cgpa || edu.marks}`;
+          educationList.appendChild(eduItem);
+        });
+
+        const contactList = document.getElementById("contact-list");
+        for (let i in data.contactinfo) {
+          const contactItem = document.createElement("li");
+          contactItem.innerHTML = `<strong>${i} : </strong> ${data.contactinfo[i]}`;
+          contactList.appendChild(contactItem);
+        }
+      });
+    </script>
+  </body>
+</html>
