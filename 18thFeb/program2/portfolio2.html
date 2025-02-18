@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Krishna Manoj PVR | Portfolio</title>
+  </head>
+  <style>
+    :root {
+      --primary-color: #3498db;
+      --secondary-color: #2c3e50;
+      --accent-color: #e74c3c;
+      --light-bg: #f9f6f0;
+      --dark-bg: #34495e;
+      --text-dark: #2c3e50;
+      --text-light: #ecf0f1;
+      --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --border-radius: 8px;
+      --transition: all 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-bg);
+      color: var(--text-dark);
+      line-height: 1.6;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    header {
+      background: linear-gradient(to right, var(--primary-color), var(--dark-bg));
+      color: var(--text-light);
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    nav {
+      background-color: var(--secondary-color);
+      padding: 1rem;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      list-style-type: none;
+    }
+
+    nav ul li a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 500;
+      padding: 0.5rem 1rem;
+      border-radius: var(--border-radius);
+      transition: var(--transition);
+    }
+
+    nav ul li a:hover {
+      background-color: var(--primary-color);
+      color: white;
+    }
+
+    section {
+      padding: 2rem 1rem;
+      margin: 2rem 0;
+      background-color: white;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    section h2 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--primary-color);
+    }
+
+    #introduction {
+      background: linear-gradient(135deg, white, #e0f7fa);
+    }
+
+    #self-intro {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      padding: 1rem;
+      border-left: 4px solid var(--primary-color);
+      background-color: rgba(52, 152, 219, 0.1);
+    }
+
+    ul:not(nav ul) {
+      padding-left: 1.5rem;
+    }
+
+    ul:not(nav ul) li {
+      margin-bottom: 0.75rem;
+    }
+
+    #skills-list li, #contact-list li {
+      list-style-type: none;
+      padding: 0.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    #skills-list li:hover, #contact-list li:hover {
+      background-color: #f5f5f5;
+    }
+
+    #projects-list li {
+      padding: 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: var(--border-radius);
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      transition: var(--transition);
+    }
+
+    #projects-list li:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    #projects-list a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: var(--primary-color);
+      text-decoration: none;
+      font-weight: bold;
+      transition: var(--transition);
+    }
+
+    #projects-list a:hover {
+      color: var(--accent-color);
+    }
+
+    #education-list li {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px dashed #ccc;
+    }
+
+    form {
+      display: block;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 1.5rem;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: var(--border-radius);
+      box-shadow: var(--shadow);
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-top: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+    form input:focus, form textarea:focus {
+      outline: none;
+      border-color: var(--primary-color);
+      box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+    }
+
+    form input[type="submit"] {
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      cursor: pointer;
+      padding: 0.75rem 1.5rem;
+      font-weight: bold;
+      transition: var(--transition);
+    }
+
+    form input[type="submit"]:hover {
+      background-color: #2980b9;
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: var(--text-light);
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      nav ul li {
+        width: 100%;
+        text-align: center;
+      }
+
+      nav ul li a {
+        display: block;
+        padding: 0.75rem;
+      }
+
+      section {
+        padding: 1.5rem 0.75rem;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      header h1 {
+        font-size: 1.8rem;
+      }
+
+      #self-intro {
+        font-size: 1rem;
+      }
+
+      section h2 {
+        font-size: 1.5rem;
+      }
+
+      form {
+        padding: 1rem;
+      }
+    }
+
+    #achievement-list li {
+      position: relative;
+      padding-left: 1.5rem;
+    }
+
+    #achievement-list li::before {
+      content: "🏆";
+      position: absolute;
+      left: 0;
+      color: var(--accent-color);
+    }
+
+    #contact-list li strong {
+      color: var(--secondary-color);
+      display: inline-block;
+      min-width: 80px;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+      margin: 0;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="container">
+        <h1>Krishna Manoj PVR</h1>
+      </div>
+    </header>
+    <nav>
+        
+      <div class="container">
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#achievement">Achievements</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#feedback">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+    
+    <main class="container">
+      <section id="introduction">
+        <h2>Self Introduction</h2>
+        <p id="self-intro"></p>
+      </section>
+      <hr />
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul id="skills-list"></ul>
+      </section>
+      <hr />
+      <section id="projects">
+        <h2>Projects / Work Experiences</h2>
+        <ul id="projects-list"></ul>
+      </section>
+      <hr />
+      <section id="achievement">
+        <h2>Achievements</h2>
+        <ul id="achievement-list"></ul>
+      </section>
+      <hr />
+      <section id="education">
+        <h2>Education Profile</h2>
+        <ul id="education-list"></ul>
+      </section>
+      <hr />
+      <section id="contact">
+        <h2>Contact Information</h2>
+        <ul id="contact-list"></ul>
+      </section>
+      <hr />
+      <section id="feedback">
+        <h2>Feedback Form</h2>
+        <form id="feedback-form">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="feedback">Feedback:</label>
+          <textarea
+            id="feedback"
+            name="feedback"
+            rows="5"
+            required
+          ></textarea>
+          <input type="submit" value="Submit Feedback" />
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2025 Krishna Manoj PVR | Portfolio</p>
+    </footer>
+
+    <script>
+      const data = {
+        selfintro:
+          "Enthusiastic full stack developer and AI learner. Passionate about translating academic concepts into practical solutions and eager to contribute in a dynamic, challenging environment.",
+        skills: {
+          languages: ["Java", "Python", "C/C++", "Dart"],
+          webTechnologies: ["HTML", "CSS", "JavaScript"],
+          databases: ["MongoDB", "MySQL"],
+          frameworks: [
+            "Pandas",
+            "Numpy",
+            "Flask",
+            "SKLearn",
+            "FastAPI",
+            "NodeJS",
+            "ExpressJS",
+            "ReactJS",
+            "Bootstrap",
+            "Flutter",
+          ],
+          tools: [
+            "Visual Studio Code",
+            "Git",
+            "GitHub",
+            "Google Cloud",
+            "Figma",
+            "Canva",
+            "Postman",
+            "Playwright",
+            "Vercel",
+            "Render",
+            "Jupyter Notebook",
+          ],
+          operatingSystems: ["Windows", "Linux"],
+        },
+        projects: [
+          {
+            title: "Tech for Autism and Dyslexia",
+            description:
+              "Leading the development of interactive games for children with Autism and Dyslexia. Built a website for parents, therapists, doctors, and centers to view and manage children's reports, successfully digitizing 95% of handwritten reports and game data and enhancing report accessibility and management.",
+            stack: ["MERN"],
+            link: "https://github.com/TechForAutismDyslexia/",
+          },
+          {
+            title: "Tires on Highways",
+            description:
+              "A web application analyzes tire conditions through images captured at toll plazas, achieving 85% accuracy in detecting worn-out or unsafe tires. It alerts vehicle owners via SMS, contributing to improved road safety.",
+            stack: ["MERN", "ML"],
+            link: "https://github.com/krishnamanojpvr/tiresonhighways",
+          },
+        ],
+        achievements: [
+          "Achieved the NCC 'A' Certificate, awarded by the National Cadet Corps for successfully completing the program, demonstrating discipline, leadership, and physical endurance.",
+          "Certified in 'Introduction to AWS Marketplace and Skill Builder'",
+          "Completed Google Cloud Study Jams and Generative AI course under Google Developer Student Clubs",
+          "Contributed to open source projects Girl Script Summer of Code 2024",
+          "Certified as a Postman API Fundamentals Student Expert",
+        ],
+        education: [
+          {
+            degree: "Bachelor of Technology",
+            year: "2022 - Present",
+            institution: "Keshav Memorial Institute of Technology, Hyderabad",
+            cgpa: "9.46/10",
+          },
+          {
+            degree: "Class-12",
+            year: "May 2022",
+            institution:
+              "Nine Education IIT Academy, Hyderabad. Telangana State Board of Intermediate Education.",
+            marks: "971/1000",
+          },
+          {
+            degree: "Class-10",
+            year: "March 2020",
+            institution:
+              "DAV High School, Nagarjuna Sagar. Board of Secondary Education, Telangana State.",
+            cgpa: "10/10",
+          },
+        ],
+        contactinfo: {
+          Phone: "+91 9441585691",
+          Email: "krishnamanojpalankipati@gmail.com",
+          Location: "Hyderabad, India",
+          LinkedIn: "linkedin.com/in/krishna-manoj-pvr-14b237267",
+          GitHub: "github.com/krishnamanojpvr",
+        },
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("self-intro").textContent = data.selfintro;
+
+        const skillsList = document.getElementById("skills-list");
+        for (const category in data.skills) {
+          const skillCategory = document.createElement("li");
+          skillCategory.innerHTML = `<strong>${category
+            .replace(/([A-Z])/g, " $1")
+            .trim()}:</strong> ${data.skills[category].join(", ")}`;
+          skillsList.appendChild(skillCategory);
+        }
+
+        const projectsList = document.getElementById("projects-list");
+        data.projects.forEach((project) => {
+          const projectItem = document.createElement("li");
+          projectItem.innerHTML = `<strong>${project.title}</strong>: ${
+            project.description
+          } <br> <em>Stack:</em> ${project.stack.join(", ")} | <a href="${
+            project.link
+          }" target="_blank">View Project</a>`;
+          projectsList.appendChild(projectItem);
+        });
+
+        const achievementlist = document.getElementById("achievement-list");
+        data.achievements.forEach((achievement) => {
+          const achievementItem = document.createElement("li");
+          achievementItem.textContent = achievement;
+          achievementlist.appendChild(achievementItem);
+        });
+
+        const educationList = document.getElementById("education-list");
+        data.education.forEach((edu) => {
+          const eduItem = document.createElement("li");
+          eduItem.innerHTML = `<strong>${edu.degree} (${edu.year})</strong> - ${
+            edu.institution
+          } <br> <em>CGPA/Marks:</em> ${edu.cgpa || edu.marks}`;
+          educationList.appendChild(eduItem);
+        });
+
+        const contactList = document.getElementById("contact-list");
+        for (let i in data.contactinfo) {
+          const contactItem = document.createElement("li");
+          contactItem.innerHTML = `<strong>${i}:</strong> ${data.contactinfo[i]}`;
+          contactList.appendChild(contactItem);
+        }
+      });
+    </script>
+  </body>
+</html>

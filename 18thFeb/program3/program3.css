@@ -1,0 +1,220 @@
+:root {
+    --primary-color: #4a90e2;
+    --primary-dark: #3a7bc8;
+    --secondary-color: #f5f9ff;
+    --text-color: #333;
+    --border-color: #ddd;
+    --error-color: #e74c3c;
+    --success-color: #2ecc71;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    max-width: 650px;
+    width: 100%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    background-color: var(--secondary-color);
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
+    background-color: #fff;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23333' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 16px;
+    padding-right: 40px;
+}
+
+.required {
+    color: var(--error-color);
+    margin-left: 3px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(74, 144, 226, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 5px;
+    height: 5px;
+    background: rgba(255, 255, 255, 0.5);
+    opacity: 0;
+    border-radius: 100%;
+    transform: scale(1, 1) translate(-50%);
+    transform-origin: 50% 50%;
+}
+
+button:focus:not(:active)::after {
+    animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+    0% { transform: scale(0, 0); opacity: 0.5; }
+    20% { transform: scale(25, 25); opacity: 0.5; }
+    100% { opacity: 0; transform: scale(40, 40); }
+}
+
+.note {
+    font-size: 14px;
+    color: #777;
+    margin-top: 20px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .container {
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    h2 {
+        font-size: 22px;
+    }
+    
+    .form-group input, 
+    .form-group textarea, 
+    .form-group select,
+    button {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+}
+
+@keyframes success {
+    0% { transform: scale(0.7); opacity: 0; }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.success-message {
+    display: none;
+    text-align: center;
+    color: var(--success-color);
+    font-weight: 600;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 6px;
+    background: rgba(46, 204, 113, 0.1);
+    animation: success 0.5s ease;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="program3.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Your Feedback Matters</h2>
+        <form id="feedback-form">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="rating">Overall Rating <span class="required">*</span></label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select your rating</option>
+                    <option value="1">1 - Very Poor</option>
+                    <option value="2">2 - Poor</option>
+                    <option value="3">3 - Average</option>
+                    <option value="4">4 - Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="questions">Questions About Our Product/Service <span class="required">*</span></label>
+                <textarea id="questions" name="questions" placeholder="Please share your questions here..." required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="comments">Additional Comments</label>
+                <textarea id="comments" name="comments" placeholder="Any other thoughts you'd like to share..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit">Submit Feedback</button>
+            </div>
+            <div class="success-message" id="success-message">
+                Thank you for your feedback! We appreciate your input.
+            </div>
+            <p class="note"><span class="required">*</span> indicates required fields</p>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.getElementById("feedback-form").addEventListener("submit", function (e) {
+                e.preventDefault();
+                document.getElementById("success-message").style.display = "block";
+                document.getElementById("feedback-form").reset();
+                setTimeout(function() {
+                    document.getElementById("success-message").style.display = "none";
+                }, 3000);
+            });
+        });
+    </script>
+</body>
+</html>
