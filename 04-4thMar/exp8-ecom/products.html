@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products - LuxeMarket</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation (Same as other pages) -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+          <i class="bi bi-bag-heart-fill text-primary"></i> LuxeMarket
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="products.html">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="partners.html">Partners</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link btn btn-primary text-white ms-2 px-3"
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+                >Login</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <header
+      class="products-hero text-white text-center d-flex align-items-center"
+    >
+      <div class="container">
+        <h1 class="display-4 fw-bold mb-4">Our Products</h1>
+        <p class="lead">Discover our exclusive collection of premium items</p>
+      </div>
+    </header>
+
+    <!-- Product Categories -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-3">
+            <!-- Filters -->
+            <div class="card border-0 shadow-sm">
+              <div class="card-body">
+                <h5 class="mb-4">Filters</h5>
+                <div class="mb-4">
+                  <h6>Categories</h6>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="watches"
+                    />
+                    <label class="form-check-label" for="watches"
+                      >Watches</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="electronics"
+                    />
+                    <label class="form-check-label" for="electronics"
+                      >Electronics</label
+                    >
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      id="fashion"
+                    />
+                    <label class="form-check-label" for="fashion"
+                      >Fashion</label
+                    >
+                  </div>
+                </div>
+                <div class="mb-4">
+                  <h6>Price Range</h6>
+                  <input
+                    type="range"
+                    class="form-range"
+                    min="0"
+                    max="1000"
+                    id="priceRange"
+                  />
+                  <div class="d-flex justify-content-between">
+                    <span>$0</span>
+                    <span>$1000</span>
+                  </div>
+                </div>
+                <button class="btn btn-primary w-100">Apply Filters</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-9">
+            <!-- Products Grid -->
+            <div class="row g-4">
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1523275335684-37898b6baf30"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Premium Watch</h5>
+                    <p class="card-text">
+                      Elegant timepiece for the modern individual.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 class="text-primary mb-0">$299.99</h6>
+                      <button class="btn btn-outline-primary">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Wireless Headphones</h5>
+                    <p class="card-text">
+                      Premium sound quality with noise cancellation.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 class="text-primary mb-0">$199.99</h6>
+                      <button class="btn btn-outline-primary">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-149155389591d"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Sport Shoes</h5>
+                    <p class="card-text">
+                      Comfortable and stylish for your active lifestyle.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 class="text-primary mb-0">$129.99</h6>
+                      <button class="btn btn-outline-primary">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Running Shoes</h5>
+                    <p class="card-text">
+                      Professional grade running shoes for athletes.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 class="text-primary mb-0">$159.99</h6>
+                      <button class="btn btn-outline-primary">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1546868871-7041f2a55e12"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Smart Watch</h5>
+                    <p class="card-text">
+                      Track your fitness and stay connected.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 class="text-primary mb-0">$249.99</h6>
+                      <button class="btn btn-outline-primary">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                  <img
+                    src="https://images.unsplash.com/photo-1572635196237-14b3f281503f"
+                    class="card-img-top"
+                    alt="Product"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Sunglasses</h5>
+                    <p class="card-text">Stylish protection for your eyes.</p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <h6 class="text-primary mb-0">$89.99</h6>
+                      <button class="btn btn-outline-primary">
+                        Add to Cart
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination -->
+            <nav class="mt-5">
+              <ul class="pagination justify-content-center">
+                <li class="page-item disabled">
+                  <a class="page-link" href="#" tabindex="-1">Previous</a>
+                </li>
+                <li class="page-item active">
+                  <a class="page-link" href="#">1</a>
+                </li>
+                <li class="page-item" ><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#">Next</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Modal (Same as other pages) -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header border-0">
+            <h5 class="modal-title">Login to Your Account</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" required />
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="password"
+                  required
+                />
+              </div>
+              <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" id="remember" />
+                <label class="form-check-label" for="remember"
+                  >Remember me</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="mb-3">About LuxeMarket</h5>
+            <p>
+              Your premier destination for luxury shopping. We offer the finest
+              selection of premium products.
+            </p>
+          </div>
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h5 class="mb-3">Quick Links</h5>
+            <ul class="list-unstyled">
+              <li><a href="about.html" class="text-white">About Us</a></li>
+              <li><a href="products.html" class="text-white">Products</a></li>
+              <li><a href="contact.html" class="text-white">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4">
+            <h5 class="mb-3">Connect With Us</h5>
+            <div class="d-flex gap-3">
+              <a href="#" class="text-white"
+                ><i class="bi bi-facebook fs-4"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="bi bi-twitter fs-4"></i
+              ></a>
+              <a href="#" class="text-white"
+                ><i class="bi bi-instagram fs-4"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <hr class="my-4" />
+        <div class="text-center">
+          <p class="mb-0">&copy; 2024 LuxeMarket. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

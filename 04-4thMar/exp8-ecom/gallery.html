@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - LuxeMarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation (Same as other pages) -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-bag-heart-fill text-primary"></i> LuxeMarket
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="partners.html">Partners</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2 px-3" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Gallery Hero Section -->
+    <header class="gallery-hero text-white text-center d-flex align-items-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4">Our Gallery</h1>
+            <p class="lead">Experience our products in action</p>
+        </div>
+    </header>
+
+    <!-- Gallery Grid -->
+    <section class="py-5">
+        <div class="container">
+            <!-- Gallery Filter Buttons -->
+            <div class="text-center mb-5">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-primary active">All</button>
+                    <button type="button" class="btn btn-outline-primary">Watches</button>
+                    <button type="button" class="btn btn-outline-primary">Electronics</button>
+                    <button type="button" class="btn btn-outline-primary">Fashion</button>
+                </div>
+            </div>
+
+            <!-- Gallery Items -->
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30" alt="Gallery Image" class="img-fluid">
+                        <div class="p-3">
+                            <h5>Premium Watch Collection</h5>
+                            <p class="text-muted mb-0">Luxury Timepieces</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e" alt="Gallery Image" class="img-fluid">
+                        <div class="p-3">
+                            <h5>Audio Excellence</h5>
+                            <p class="text-muted mb-0">Premium Headphones</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff" alt="Gallery Image" class="img-fluid">
+                        <div class="p-3">
+                            <h5>Sport Collection</h5>
+                            <p class="text-muted mb-0">Athletic Wear</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12" alt="Gallery Image" class="img-fluid">
+                        <div class="p-3">
+                            <h5>Smart Technology</h5>
+                            <p class="text-muted mb-0">Wearable Tech</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f" alt="Gallery Image" class="img-fluid">
+                        <div class="p-3">
+                            <h5>Summer Style</h5>
+                            <p class="text-muted mb-0">Fashion Accessories</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="gallery-item shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="Gallery Image" class="img-fluid">
+                        <div class="p-3">
+                            <h5>Active Lifestyle</h5>
+                            <p class="text-muted mb-0">Sports Equipment</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="text-center mt-5">
+                <button class="btn btn-primary btn-lg px-5">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Login Modal (Same as other pages) -->
+    <div class="modal fade" id="loginModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Login to Your Account</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" required>
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">Remember me</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer (Same as other pages) -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">About LuxeMarket</h5>
+                    <p>Your premier destination for luxury shopping. We offer the finest selection of premium products.</p>
+                </div>
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <h5 class="mb-3">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-white">About Us</a></li>
+                        <li><a href="products.html" class="text-white">Products</a></li>
+                        <li><a href="contact.html" class="text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-twitter fs-4"></i></a>
+                        <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center">
+                <p class="mb-0">&copy; 2024 LuxeMarket. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
