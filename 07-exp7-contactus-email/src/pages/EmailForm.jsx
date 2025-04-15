@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./EmailForm.css"; // Make sure to import the CSS file
+import axios from "axios";
 const formConfig = [
   { id: 1, type: "text", name: "firstName", placeholder: "First Name" },
   { id: 2, type: "text", name: "lastName", placeholder: "Last Name" },
@@ -46,10 +47,17 @@ const EmailForm = () => {
       [name]: value,
     }));
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    const text = `Dear ${formData.firstName}, thankyou for submitting your form. . .`;
     // Print form data to console
-    console.log("Form Data:", formData);
+    await axios.post("", {
+      user: "",
+      password: "",
+      email: formData.email,
+      subject: "Form Submission",
+      text: text,
+    });
     // Clear the form fields
     setFormData({
       firstName: "",
