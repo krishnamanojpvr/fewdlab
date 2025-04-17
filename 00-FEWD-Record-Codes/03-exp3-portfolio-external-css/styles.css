@@ -1,0 +1,51 @@
+body {
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+  background-color: #fcf8e8;
+}
+.profile {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.735);
+  max-width: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.profile-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 10%;
+}
+#score {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 70%;
+}
+#score td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#score th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #94b49f;
+  color: white;
+  text-decoration: solid;
+}
+.proj {
+  margin: 10px;
+  width: 30%;
+  border: 2px solid #df7861;
+  padding: 5px;
+  float: left;
+}
+#conform {
+  margin: auto;
+  border: 2px solid #df7861;
+  padding: 5px;
+  float: left;
+  width: 25%;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy Best!</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    />
+
+    <!-- jQuery, Popper.js, and Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <script
+      src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-dark navbar-expand-sm fixed-top"
+      style="background-color: darkblue"
+    >
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#Navbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand mr-auto" href="#">
+          <img src="imgs/logo.png" width="85%" height="65%" alt="Logo" />
+        </a>
+        <div class="collapse navbar-collapse" id="Navbar">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html"
+                ><span class="fa fa-home fa-lg"></span> Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html"
+                ><span class="fa fa-list fa-lg"></span> About Us</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html"
+                ><span class="fa fa-info fa-lg"></span> Products</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"
+                ><span class="fa fa-address-card fa-lg"></span> Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <span class="navbar-text">
+          <a data-toggle="modal" data-target="#loginModal">
+            <span class="fa fa-sign-in"></span> Login
+          </a>
+        </span>
+      </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Login</h4>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-1">
+            <div class="md-form mb-1">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <input
+                type="email"
+                id="defaultForm-email"
+                class="form-control validate"
+              />
+              <label for="defaultForm-email">Your email</label>
+            </div>
+            <div class="md-form mb-1">
+              <i class="fas fa-lock prefix grey-text"></i>
+              <input
+                type="password"
+                id="defaultForm-pass"
+                class="form-control validate"
+              />
+              <label for="defaultForm-pass">Your password</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-default">Login</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Login Button -->
+    <div class="text-center mt-5 pt-5">
+      <a
+        href="#"
+        class="btn btn-default btn-rounded mb-1"
+        data-toggle="modal"
+        data-target="#loginModal"
+        >Launch Login Form</a
+      >
+    </div>
+
+    <!-- Main Image -->
+    <div class="container mt-4 pt-4">
+      <div class="row">
+        <img src="imgs/home3.jpg" width="100%" height="auto" alt="Home Image" />
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="footer text-center text-white mt-5"
+      style="background-color: #343a40"
+    >
+      <div class="container">
+        <div class="row">
+          <!-- Location -->
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h5 class="mb-4">Location</h5>
+            <p class="lead mb-0">
+              27 Jane Street, John Doe<br />
+              TS 5000027
+            </p>
+          </div>
+
+          <!-- Social Icons -->
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <h5 class="mb-4">Around the Web</h5>
+            <a class="btn btn-outline-light btn-social mx-1" href="#!"
+              ><i class="fab fa-fw fa-facebook-f"></i
+            ></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="#!"
+              ><i class="fab fa-fw fa-twitter"></i
+            ></a>
+            <a class="btn btn-outline-light btn-social mx-1" href="#!"
+              ><i class="fab fa-fw fa-linkedin-in"></i
+            ></a>
+          </div>
+
+          <!-- About -->
+          <div class="col-lg-4">
+            <h5 class="mb-4">About</h5>
+            <p class="lead mb-0">BuyBest</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Copyright -->
+    <div
+      class="copyright py-4 text-center text-white"
+      style="background-color: #23272b"
+    >
+      <div class="container"><small>Copyright &copy; John Doe 2022</small></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+body {
+  background-color: #fcf8e8;
+}
+.row {
+  padding-top: 4rem;
+}
+.row-header {
+  margin: 0px auto;
+  padding: 0px;
+}
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+.footer {
+  background-color: #bd5d38;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
+  color: white;
+}
+.copyright {
+  background-color: #9e3208;
+}
+.address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
+}
+body {
+  padding: 0px 0px 0px 0px;
+  z-index: 0;
+}
+#mynav {
+  background-color: #bd5d38;
+  color: white;
+  z-index: 1;
+}
+.proimage {
+  border: 0.5rem solid #c8927f;
+}
+#achieves {
+  margin-bottom: 18rem;
+}
+#acads {
+  margin-bottom: 10rem;
+}
+#mycards {
+  margin-bottom: 10rem;
+}
+#about {
+  margin-bottom: 18rem;
+}
+#contact {
+  margin-bottom: 5rem;
+}
+/* scroll */
+html {
+  scroll-behavior: smooth;
+}
