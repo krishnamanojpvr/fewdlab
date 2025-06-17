@@ -1,0 +1,84 @@
+/* Apply a general font for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Using Google Fonts */
+.one {
+    font-family: Times New Roman, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-overflow: clip;
+}
+
+.two {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Custom font styling */
+.three {
+    font-family: Georgia, serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: oblique;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+/* 1. Text Shadow Effect */
+.shadow {
+    font-size: 40px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.7);
+}
+
+/* 2. Gradient Text Effect */
+.gradient {
+    font-size: 40px;
+    background: linear-gradient(to right, #ff416c, #ff4b2b);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 3. Glowing Text Effect */
+.glow {
+    font-size: 40px;
+    color: #fff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+}
+
+/* 4. Outlined Text Effect */
+.outline {
+    font-size: 40px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+}
+
+/* 5. Animated Text Effect */
+@keyframes flicker {
+    0% { opacity: 1; }
+    50% { opacity: 0.4; }
+    100% { opacity: 1; }
+}
+
+.animate {
+    font-size: 40px;
+    color: #ffeb3b;
+    animation: flicker 1s infinite;
+}
+
+/* 6. Rotated Text Effect */
+.rotate {
+    font-size: 40px;
+    transform: rotate(-10deg);
+    display: inline-block;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+}
+

@@ -1,0 +1,70 @@
+/* General Styling */
+body {
+    text-align: center;
+    background-color: #222;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Base Box Style */
+.box {
+    width: 250px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* 1. Box Shadow Effect */
+.shadow {
+    background-color: #ff6b6b;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* 2. Border Effect */
+.border {
+    background-color: #4ecdc4;
+    border: 5px solid white;
+}
+
+/* 3. Hover Effect */
+.hover {
+    background-color: #ffcc5c;
+}
+.hover:hover {
+    background-color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+/* 4. Transform Effect */
+.transform {
+    background-color: #3498db;
+}
+.transform:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* 5. Glowing Effect */
+.glow {
+    background-color: #f39c12;
+    box-shadow: 0 0 10px #f39c12, 0 0 20px #f39c12;
+}
+
+/* 6. Animated Box */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.animate {
+    background-color: #8e44ad;
+    animation: bounce 1s infinite;
+}
